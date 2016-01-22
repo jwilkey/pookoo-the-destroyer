@@ -32,3 +32,15 @@ p {
 .screenshot {
   padding: 10px;
 }
+
+.gallery {
+  height: 400px;
+  overflow: auto;
+  overflow-y: hidden;
+  margin: 0 auto;
+  white-space: nowrap
+}
+
+.gallery .screenshot {
+  height: 100%;
+}
