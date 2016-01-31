@@ -43,3 +43,7 @@ p {
 .gallery .screenshot {
   height: 100%;
 }
+
+button > a {
+  color: white;
+}
