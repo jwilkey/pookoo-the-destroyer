@@ -12,20 +12,26 @@ body {
 }
 
 h1 {
-  color: #33aaff;
+  color: rgb(255, 244, 0);
   font-family: 'glametrix';
+  font-variant: small-caps;
+  font-weight: 900;
 }
 
 h2,
 h3,
 h4,
 p {
-  color: #eee;
+  color: #eaeaea;
   font-family: 'glametrix';
 }
 
+a {
+  color: #99aaff;
+}
+
 .logo {
-  max-height: 50%;
+  max-height: 50px;
 }
 
 .screenshot {
@@ -33,7 +39,7 @@ p {
 }
 
 .gallery {
-  height: 400px;
+  height: 200px;
   overflow: auto;
   overflow-y: hidden;
   margin: 0 auto;
@@ -46,4 +52,17 @@ p {
 
 button > a {
   color: white;
+}
+
+/* Bootstrap overrides */
+.navbar-brand {
+  padding: 0px;
+  padding-left: 10px;
+}
+
+.thumbnail {
+  background-color: rgba(0,0,0,0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: #ddaa33
 }
