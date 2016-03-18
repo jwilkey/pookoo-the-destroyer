@@ -9,6 +9,7 @@
 body {
   background-image: url('../images/stars_space.png');
   background-attachment: fixed;
+  padding-top: 60px;
 }
 
 h1 {
