@@ -13,14 +13,14 @@ body {
   padding-top: 60px;
 }
 
-h1 {
-  color: rgb(255, 244, 0);
+h2 {
+  color: #ffaa22;
   font-family: 'glametrix';
   font-variant: small-caps;
   font-weight: 900;
 }
 
-h2,
+h1,
 h3,
 h4,
 p {
