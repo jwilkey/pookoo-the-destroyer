@@ -7,6 +7,7 @@
 }
 
 body {
+  background-color: black;
   background-image: url('../images/stars_space.png');
   background-size: 300px;
   background-attachment: fixed;
@@ -30,6 +31,10 @@ p {
 
 a {
   color: #99aaff;
+}
+
+hr {
+  border-color: #444;
 }
 
 .logo {
