@@ -14,7 +14,8 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Can you beat my score?" />
     <link rel="shortcut icon" href="images/PookooRight.png" type="image/x-icon" />
   </head>
 
@@ -41,10 +42,13 @@ function transformToAssocArray( prmstr ) {
 }
 
 $(document).ready(function() {
-  var world = getSearchParameters()["world"];
-  var level = getSearchParameters()["level"];
-  var time = getSearchParameters()["time"];
-  var score = getSearchParameters()["score"];
+  var w = getSearchParameters()["w"];
+  var world = "Pluto";
+  if (w == 2) { world = "Neptune"; }
+
+  var level = getSearchParameters()["l"];
+  var time = getSearchParameters()["t"];
+  var score = getSearchParameters()["s"];
   $("#world").text(world);
   $("#level").text(level);
   $("#time").text(time);
