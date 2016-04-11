@@ -20,7 +20,7 @@
 
 <body>
 <div class="container" style="background-color: #17171a;">
-  <p><strong><span id="world"></span> <span id="level"></span>: </strong>Are you better than <span id="time"></span> seconds and <span id="score"></span> points?</p>
+  <p class="lead"><strong><span id="world"></span> <span id="level"></span>: </strong>Are you better than <span id="time"></span> seconds and <span id="score"></span> points?</p>
   <img src="images/pookoo-icon.png" />
 </div>
 
@@ -41,10 +41,17 @@ function transformToAssocArray( prmstr ) {
 }
 
 $(document).ready(function() {
-  $("#world").text(getSearchParameters()["world"]);
-  $("#level").text(getSearchParameters()["level"]);
-  $("#time").text(getSearchParameters()["time"]);
-  $("#score").text(getSearchParameters()["score"]);
+  var world = getSearchParameters()["world"];
+  var level = getSearchParameters()["level"];
+  var time = getSearchParameters()["time"];
+  var score = getSearchParameters()["score"];
+  $("#world").text(world);
+  $("#level").text(level);
+  $("#time").text(time);
+  $("#score").text(score);
+  $('meta[name=description]').remove();
+  var description = '' + world + ' ' + level + ': Are you better than ' + time + ' seconds and '+ score + ' points?';
+  $('head').append( '<meta name="description" content="' + description + '">' );
 });
 </script>
 </body>
