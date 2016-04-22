@@ -7,56 +7,31 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/pookoo.css?v=2">
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <!-- <script src="javascripts/respond.js"></script> -->
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <script src="javascripts/pookoo.js"></script>
+
+    <script>
+      var w = param("w");
+      var world = "Pluto";
+      if (w == 2) { world = "Neptune"; }
+      var description = '' + world + ' ' + param("l") + ': Are you better than ' + param("t") + ' seconds and '+ param("s") + ' points?';
+
+      $("head").append("<meta name='description' content='" + description + "' />")
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Can you beat my score?" />
     <link rel="shortcut icon" href="images/PookooRight.png" type="image/x-icon" />
   </head>
 
 <body>
 <div class="container" style="background-color: #17171a;">
-  <p class="lead"><strong><span id="world"></span> <span id="level"></span>: </strong>Are you better than <span id="time"></span> seconds and <span id="score"></span> points?</p>
-  <img src="images/pookoo-icon.png" />
+  <img class="img-responsive col-xs-2" src="images/appIcon180.png" />
+  <p class="lead col-xs-10"></p>
 </div>
 
 <script>
-function getSearchParameters() {
-    var prmstr = window.location.search.substr(1);
-    return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
-}
-
-function transformToAssocArray( prmstr ) {
-  var params = {};
-  var prmarr = prmstr.split("&");
-  for ( var i = 0; i < prmarr.length; i++) {
-      var tmparr = prmarr[i].split("=");
-      params[tmparr[0]] = tmparr[1];
-  }
-  return params;
-}
-
-$(document).ready(function() {
-  var w = getSearchParameters()["w"];
-  var world = "Pluto";
-  if (w == 2) { world = "Neptune"; }
-
-  var level = getSearchParameters()["l"];
-  var time = getSearchParameters()["t"];
-  var score = getSearchParameters()["s"];
-  $("#world").text(world);
-  $("#level").text(level);
-  $("#time").text(time);
-  $("#score").text(score);
-  $('meta[name=description]').remove();
-  var description = '' + world + ' ' + level + ': Are you better than ' + time + ' seconds and '+ score + ' points?';
-  $('head').append( '<meta name="description" content="' + description + '">' );
-});
+  $(document).ready(function() {
+      $(".lead").html($("meta[name=description]").attr("content"));
+  });
 </script>
 </body>
 </html>
