@@ -1,37 +1,129 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Pookoo the Destroyer</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheets/pookoo.css?v=2">
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script src="javascripts/pookoo.js"></script>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Pookoo the Destroyer</title>
+<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+<link rel="stylesheet" href="stylesheets/pookoo.css?v=2">
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script src="javascripts/pookoo.js"></script>
 
-    <script>
-      var w = param("w");
-      var world = "Pluto";
-      if (w == 2) { world = "Neptune"; }
-      var description = '' + world + ' ' + param("l") + ': Are you better than ' + param("t") + ' seconds and '+ param("s") + ' points?';
+<script>
+var w = param("w");
+var world = "Pluto";
+if (w == 2) { world = "Neptune"; }
+var description = '' + world + ' ' + (param("l") || "X") + ': Can you beat ' + (param("t") || 100) + ' seconds and '+ (param("s") || 20) + ' points?';
 
-      $("head").append("<meta name='description' content='" + description + "' />")
-    </script>
+$("head").append("<meta name='description' content='" + description + "' />")
+</script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="shortcut icon" href="images/PookooRight.png" type="image/x-icon" />
-  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="images/PookooRight.png" type="image/x-icon" />
+</head>
 
 <body>
-<div class="container" style="background-color: #17171a;">
-  <img class="img-responsive col-xs-2" src="images/appIcon180.png" />
-  <p class="lead col-xs-10"></p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./index.html">
+        <img alt="Pookoo the Destroyer" class="logo" src="images/PookooLogoPookoo.png">
+      </a>
+    </div>
+
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="./support.html">Support</a></li>
+        <li><a href="./privacy.html">Privacy</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<h3 class="text-center">Pookoo the Destroyer</h3>
+
+<div class="container paneled">
+  <div class="row">
+    <img class="img-responsive col-xs-2 paneled" src="images/appIcon180.png" />
+    <div class="col-xs-10">
+      <h2 class="headline"></h2>
+      <div>
+        <h3>
+          <a href="https://itunes.apple.com/us/app/pookoo-the-destroyer/id1068309345">iPhone</a> |
+          <a href="https://itunes.apple.com/us/app/pookoo-the-destroyer/id1068309345">iPad</a> |
+          <a href="https://itunes.apple.com/us/app/pookoo-the-destroyer/id1068309345">Apple TV</a>
+        </h3>
+      </div>
+      <p>Smash. Break. Collect. RESCUE THE OOOMAA!!!</p>
+      <p>Race your friends!</p>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MpzD0yC8WVs" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+
+  <p class="hidden-md hidden-lg">&nbsp;</p>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="images/1-8.PNG" class="thumbnail">
+      <img src="images/1-8s.png" alt="Level 1-8" />
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4 hidden-md hidden-lg">
+    <a href="images/2-5.PNG" class="thumbnail">
+      <img src="images/2-5s.png" alt="Level 2-5" />
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="images/1-9.PNG" class="thumbnail">
+      <img src="images/1-9s.png" alt="Level 1-9" />
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="images/2-2.PNG" class="thumbnail">
+      <img src="images/2-2s.png" alt="Level 2-2" />
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="images/1-7.PNG" class="thumbnail">
+      <img src="images/1-7s.png" alt="Level 1-7" />
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="images/2-7.PNG" class="thumbnail">
+      <img src="images/2-7s.png" alt="Level 2-7" />
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-3"></div>
+  <div class="col-md-9">
+    <p>Pookoo will jump and roll his way through multi-planetary levels in search of his people, the Ooomaa, who were kidnapped by the treacherous Ding.  They even took Pookoo's wife, Pinki, and their two children!</p>
+    <p>You control when and where Pookoo jumps or rolls, unless you hit some crazy obstacle of course! This game is simple, fun and appropriate for all ages, young and old.</p>
+    <p>Come on and pick up your controller, it's time to let those who do injustice in the galaxy know that "Pookoo will destroy you!"</p>
+  </div>
+</div>
 </div>
 
 <script>
-  $(document).ready(function() {
-      $(".lead").html($("meta[name=description]").attr("content"));
-  });
+$(document).ready(function() {
+    $(".headline").html($("meta[name=description]").attr("content"));
+    });
 </script>
 </body>
 </html>

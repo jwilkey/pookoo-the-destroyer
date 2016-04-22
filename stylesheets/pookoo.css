@@ -73,3 +73,17 @@ button > a {
   padding-bottom: 10px;
   border-color: #ddaa33
 }
+
+.headline {
+  /* color: #23bbff; */
+}
+
+.paneled {
+  background-color: rgba(0,0,0,0.7);
+  border: solid 1px #17171a;
+  padding: 10px;
+  border-radius: 3px;
+}
+img.paneled {
+  padding: 0px;
+}
